@@ -52,3 +52,15 @@ func reportResults(wordCounts map[string]int) {
 	}
 
 }
+
+func findAverage(numbers []int) float64 {
+	lenOfSlice := len(numbers)
+	if lenOfSlice == 0 {
+		return 0
+	}
+	sum := 0
+	for _, num := range numbers {
+		sum = sum + num
+	}
+	return float64(sum / lenOfSlice)
+}
